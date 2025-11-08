@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java script</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML="Hello Javascript";
+</script>
+<hr>
+<button onclick="myFunction()">Click me</button>
+<script>
+    function myFunction(){
+    document.getElementById("demo").innerHTML="From Sysmatic Automation";
+    }
+</script>
+<hr>
+<script>
+    function Soumya(){
+
+      document.getElementById("myID").color = "red";
+    }
+</script>
+<h1 id="myID">IOT Class</h1>
+<button onclick="Soumya()">taken by</button>
+<hr>
+<h3 id="demo1">JavaScript can change the style of an HTML element</h3>
+<button onclick="arduino()">Click me</button>
+<script>
+    function arduino(){
+    document.getElementById("demo1").innerHTML="style properties added";
+    document.getElementById("demo1").style.color = "red";
+    document.getElementById("demo1").style.backgroundColor = "pink";
+    document.getElementById("demo1").style.fontSize = "50px";
+    document.getElementById("demo1").style.textAlign = "center";
+    document.getElementById("demo1").style.border = "2px solid black";
+    }
+</script>
+<hr>
+<h1>Light Bulb Examples</h1>
+<img id="image" src="light_off.png">
+<button onclick="light(1)">light on</button>
+
+<button onclick="light(0)">light off</button>
+
+<script>
+    function light(sw){
+    var pic;
+    if (sw==0)
+    {
+    pic="light_off.png";
+    }
+    else
+    {
+    pic="light_on.png";
+    }
+    document.getElementById('image').src=pic;
+    }
+</script>
+
+<h1>Fan Control</h1>
+<img id="Fan" src="fanoff.png">
+<button onclick="Cfan(0)">Fan OFF</button>
+<button onclick="Cfan(1)">Fan ON</button>
+<script>
+    function Cfan(con){
+    var image;
+    if (con == 0){
+    image="fanoff.png";
+    }
+    else
+    {
+    image="https://www.google.com/url?sa=i&url=https%3A%2F%2Fusagif.com%2Ffr%2Fventilateur-gifs%2F&psig=AOvVaw0FHHX0CTd6Z9Y3P5zheyiv&ust=1757743268294000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiz55zG0o8DFQAAAAAdAAAAABAT";
+}
+        document.getElementById('Fan').src=image;
+}
+</script>
+<hr>
+<h1>kshama (home automation)</h1>
+<img id="light"  src="lightoffimg_3.png">
+     <button onclick="light(0)"> light off</button>
+<button onclick="light(1)"> light on</button>
+<script>
+    function light(li){
+    var lightva;
+
+    if(li==0)
+    {
+    lightva="lightoffimg_3.png";
+    }
+    else
+    {
+    lightva="lightonimg_3.png";
+    }
+    document.getElementById('light').src=lightva;
+    }
+</script>
+</div>
+<hr>
+<div>
+    <h1>Fan Control</h1>
+    <img id="fanid" src="fan_off.png" height="200" width="200">
+    <p>
+        <button onclick="funcationfan(0)">Fan OFF</button>
+        <button onclick="funcationfan(1)">Fan MID</button>
+        <button onclick="funcationfan(2)">Fan ON</button>
+    </p>
+
+    <script>
+        function funcationfan(switch1) {
+            var local;
+            if (switch1 == 0) {
+                local = "fan_off.png";
+            } else if (switch1 == 1) {
+                local = "fan_mid.png";
+            } else {
+                local = "fan_high.png";
+            }
+            document.getElementById('fanid').src = local;
+        }
+    </script>
+</div>
+
+<hr>
+<div>
+    <h1>Fan Control</h1>
+
+    <video id="fanVid" width="400" controls>
+        <source src="fanmid.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+
+    <p>
+        <button onclick="funcationfanV(0)">Fan OFF</button>
+        <button onclick="funcationfanV(1)">Fan MID</button>
+        <button onclick="funcationfanV(2)">Fan ON</button>
+    </p>
+    <script>
+        function funcationfanV(state) {
+            var localV;
+            if (state == 0) {
+                localV = "fanmid.mp4";
+            } else if (state == 1) {
+                localV = "fan_mid.mp4";
+            } else {
+                localV = "fanon.mov";
+            }
+
+            var videoElement = document.getElementById('fanVid');
+            videoElement.src = localV;
+            videoElement.load();   // Load the new video source
+            videoElement.play();   // Optionally auto-play the video
+        }
+    </script>
+</div>
+
+</body>
+</html>
+
